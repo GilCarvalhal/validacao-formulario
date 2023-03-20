@@ -7,15 +7,16 @@ function initApp() {
   addEventInElement(firstName);
   addEventInElement(lastName);
   addEventInElement(password);
-
-  email.addEventListener("blur", function () {
-    isEmailValid(email);
-  });
+  addEventInElement(email);
 }
 
 function addEventInElement(element) {
   element.addEventListener("blur", function () {
-    validateEmptyFields(element);
+    if (element.type === "text" || element.type === "password") {
+      validateEmptyFields(element);
+    } else {
+      isEmailValid(email);
+    }
   });
 }
 

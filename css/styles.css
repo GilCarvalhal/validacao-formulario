@@ -80,7 +80,7 @@ form .form-group input:focus {
 }
 
 form .form-group input.error-active {
-  border-color: 2px solid var(--red);
+  border-color: var(--red);
 }
 
 form .infos-error {
